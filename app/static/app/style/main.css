@@ -1,0 +1,10 @@
+.login,
+.image {
+  min-height: 100px;
+}
+
+.bg-image {
+  background-image: url('/static/app/images/one.jpg');
+  background-size: cover;
+  background-position: center center;
+}
