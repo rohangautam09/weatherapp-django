@@ -16,41 +16,29 @@
                     <div class="row">
                         <div class="col-lg-10 col-xl-7 mx-auto">
 
-                        <form method="POST" action="{% url 'home' %}">
-                        {% csrf_token %}
+                            <form method="POST" action="{% url 'home' %}">
+                                {% csrf_token %}
                                 <div class="form-group mb-3">
                                     <input name="place" type="text" placeholder="Enter city"class="form-control rounded-pill border-0 shadow-sm px-4">
                                 </div>
-
-
                                 <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Submit</button>
-
                             </form>
                         </div>
                     </div>
                 </div><!-- End -->
-
             </div>
-            
-
         </div><!-- End -->
-
-
     </div>
     <br><br>
-
-<div class="card bg-light">
-  <div class="card-header">
-    <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png">
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-    <h1>{{city_weather.temperature}} °C</h1>
-      <p>{{city_weather.city}}</p>
-      <p>{{city_weather.desc}}</p>
-    </blockquote>
-  </div>
+    <div class="card bg-light">
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <h1>{{city_weather.temperature}} °C</h1>
+            <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png">
+            <h3>{{city_weather.city|title}}</h3>
+            <small>{{city_weather.desc}}</small>
+        </blockquote>
+    </div>
 </div>
 </div>
-
 {% endblock %}

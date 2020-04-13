@@ -16,14 +16,22 @@
   <a class="navbar-brand">Whats the weather like ?</a>
 
 </nav>
-  <body>
+  <body style="font-family: monospace;">
   <div class="container">
   {% block content %}
   {% endblock %}
 
 </div>
  
-
+  <footer>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom" style="min-height: 20px;">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <small class="navbar-nav ml-auto" style="color:white;">© Rohan Gautam {% now "Y"%}</small>
+        </div>
+      </div>
+    </nav>
+  </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
