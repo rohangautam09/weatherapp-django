@@ -29,6 +29,7 @@
             </div>
         </div><!-- End -->
     </div>
+    {% if city_weather.temperature %}
     <br><br>
     <div class="card bg-light">
       <div class="card-body">
@@ -36,9 +37,23 @@
             <h1>{{city_weather.temperature}} °C</h1>
             <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png">
             <h3>{{city_weather.city|title}}</h3>
-            <small>{{city_weather.desc}}</small>
+            <h5>{{city_weather.country|title}}</h5>
+            <small>{{city_weather.desc|title}}</small>
         </blockquote>
     </div>
 </div>
+{% elif city_weather.message  %}
+    <br><br>
+    <div class="card bg-light">
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <h5>{{city_weather.message}} !</h5>
+
+
+        </blockquote>
+    </div>
+</div>
+
+{% endif %}
 </div>
 {% endblock %}
